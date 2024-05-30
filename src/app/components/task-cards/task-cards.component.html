@@ -1,0 +1,24 @@
+
+
+<div>
+  @for(task of data;track task.id){
+    <div class="card mt-2">
+      <div class="card-header">
+        {{task.id}}
+      </div>
+      <div class="d-flex">
+      <div class="card-body">
+        <h5 class="card-title">  {{task.title}}</h5>
+        <p class="card-text">{{task.desc}}</p>
+
+      </div>
+      <div style="width: 5%;margin-top: 2%;">
+        <img class="p-2" src="../../../assets/editicon.svg" />
+        <img  src="../../../assets/deleteicon.svg" (click)="deleteTask(task)"/>
+
+      </div>
+    </div>
+    </div>
+
+  }
+</div>

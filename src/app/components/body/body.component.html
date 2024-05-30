@@ -1,0 +1,8 @@
+<div class="bodyContainer">
+  <app-features (myEvent)="getTask($event)"></app-features>
+
+</div>
+<div class="taskCardContainer">
+  <app-task-cards [data]="taskDetails" (deleteDataEvent)="deleteTask($event)"></app-task-cards>
+</div>
+
