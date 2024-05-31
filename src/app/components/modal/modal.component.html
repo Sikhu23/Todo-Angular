@@ -1,0 +1,35 @@
+
+<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+  <!-- Button trigger modal -->
+<!-- Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="updateModalLabel">Edit Task</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex">
+          <div class="desc">Task Title :</div>
+          <div><input type="text" [(ngModel)]="taskTitle"/></div>
+        </div>
+        <div class="d-flex mt-2">
+          <div class="desc">Description :</div>
+          <div>
+            <textarea  name="textDesc" rows="3" cols="30" [(ngModel)]="taskDesc"  ></textarea>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="editTask()" >Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+

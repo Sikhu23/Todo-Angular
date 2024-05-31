@@ -1,9 +1,11 @@
-
+<app-modal [taskTitle]="editTaskData.taskTitle" [taskDesc]="editTaskData.taskDesc" [taskId]="editTaskData.id" (updateTaskEvent)="getUpdatedData($event)"></app-modal>
 
 <div>
   @for(task of data;track task.id){
+
     <div class="card mt-2">
       <div class="card-header">
+
         {{task.id}}
       </div>
       <div class="d-flex">
@@ -12,9 +14,13 @@
         <p class="card-text">{{task.desc}}</p>
 
       </div>
-      <div style="width: 5%;margin-top: 2%;">
-        <img class="p-2" src="../../../assets/editicon.svg" />
+      <div style="width: 6%;margin-top: 2%;">
+        <div  style="padding-top: 1%; display: inline-block;"><input type="checkbox"></div>
+        <img class="p-2" src="../../../assets/editicon.svg" data-bs-toggle="modal" data-bs-target="#updateModal" (click)="editTask(task)"/>
         <img  src="../../../assets/deleteicon.svg" (click)="deleteTask(task)"/>
+
+
+
 
       </div>
     </div>

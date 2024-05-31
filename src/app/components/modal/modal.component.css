@@ -1,0 +1,9 @@
+.featureContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.desc{
+  width:25%;
+  /* border:1px solid black */
+}
